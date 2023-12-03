@@ -4,7 +4,7 @@
  #
  # Created by imalittlhigh.
 ##
-say place block set
+
 $setblock ~ ~ ~ $(new_block)
 
-function bprand:replace/replace/remove_self
+function bprand:replace/replace/remove_self_set

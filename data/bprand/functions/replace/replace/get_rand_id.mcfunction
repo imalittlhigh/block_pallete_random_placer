@@ -4,7 +4,6 @@
  #
  # Created by imalittlhigh.
 ##
-say rand id
 $execute store result score %rand bprand.dummy run random value 1..$(pallet_count)
 
 execute if score %rand bprand.dummy matches 1 run data modify entity @s data.block_id set from storage bprand:blocks id0
