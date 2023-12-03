@@ -5,7 +5,6 @@
  # Created by imalittlhigh.
 ##
 
-say getids
 
 scoreboard players set %pallet_count bprand.dummy 0
 data remove storage bprand:blocks pallet_count
@@ -65,9 +64,9 @@ execute unless data storage bprand:blocks {id7:""} run scoreboard players add %p
 execute unless data storage bprand:blocks {id8:""} run scoreboard players add %pallet_count bprand.dummy 1
 execute unless data storage bprand:blocks {id9:""} run scoreboard players add %pallet_count bprand.dummy 1
 
-execute if score %pallet_count bprand.dummy matches ..0 run say no blocks men
+execute if score %pallet_count bprand.dummy matches ..0 run tellraw @s ["",{"text":"----------","color":"gold"},{"text":"\n"},{"text":"Place Blocks to randomize from in your Hotbar","color":"red"},{"text":"\n"},{"text":"----------","color":"gold"}]
 execute if score %pallet_count bprand.dummy matches 1..9 store result storage bprand:blocks pallet_count int 1 run scoreboard players get %pallet_count bprand.dummy
-execute if data storage bprand:blocks pallet_count run say ok
-execute if score %pallet_count bprand.dummy matches 10.. run say to much block yo
+execute if data storage bprand:blocks pallet_count run tellraw @s ["",{"text":"----------","color":"gold"},{"text":"\n"},{"text":"Block-palette has been saved","color":"dark_green"},{"text":"\n"},{"text":"----------","color":"gold"}]
+execute if score %pallet_count bprand.dummy matches 10.. run tellraw @s ["",{"text":"----------","color":"gold"},{"text":"\n"},{"text":"Congratulations, you have broken the datapack, or are using a mod that extends the Hotbar =)","color":"red"},{"text":"\n"},{"text":"----------","color":"gold"}]
 
 

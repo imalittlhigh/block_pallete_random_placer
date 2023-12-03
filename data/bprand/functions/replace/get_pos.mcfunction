@@ -4,7 +4,6 @@
  #
  # Created by imalittlhigh.
 ##
-say getpos
 
 data remove storage bprand:pos corner1y
 data remove storage bprand:pos corner1x

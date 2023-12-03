@@ -15,5 +15,3 @@ data modify entity @s Pos[0] set from storage bprand:pos corner1x
 data modify entity @s Pos[1] set from storage bprand:pos corner1y
 
 data modify entity @s Pos[2] set from storage bprand:pos corner1z
-
-execute if data storage bprand:blocks id_replace run say replacing
