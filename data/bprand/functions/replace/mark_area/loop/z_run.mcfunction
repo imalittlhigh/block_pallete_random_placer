@@ -2,10 +2,8 @@
  # z_run.mcfunction
  # 
  #
- # Created bz imalittlhigh.
+ # Created by imalittlhigh.
 ##
-say z run
+summon marker ~ ~ ~ {Tags:["bprand.areamarker","bprand"]}
 scoreboard players remove %diff.z bprand.dummy 1
-setblock ~ ~ ~ glass
 function bprand:replace/mark_area/loop/x
-

@@ -17,3 +17,8 @@ execute if score %rand bprand.dummy matches 7 run data modify entity @s data.blo
 execute if score %rand bprand.dummy matches 8 run data modify entity @s data.block_id set from storage bprand:blocks id7
 execute if score %rand bprand.dummy matches 9 run data modify entity @s data.block_id set from storage bprand:blocks id8
 execute if score %rand bprand.dummy matches 10 run data modify entity @s data.block_id set from storage bprand:blocks id9
+
+data modify storage bprand:blocks new_block set from entity @s data.block_id
+
+execute unless data storage bprand:blocks id_replace run function bprand:replace/replace/place_block_set with storage bprand:blocks
+execute if data storage bprand:blocks id_replace run function bprand:replace/replace/place_block_fill with storage bprand:blocks

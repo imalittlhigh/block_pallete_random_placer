@@ -4,7 +4,7 @@
  #
  # Created by imalittlhigh.
 ##
-say x run
+
+summon marker ~ ~ ~ {Tags:["bprand.areamarker","bprand"]}
 scoreboard players remove %diff.x bprand.dummy 1
-setblock ~ ~ ~ glass
 function bprand:replace/mark_area/loop/x
